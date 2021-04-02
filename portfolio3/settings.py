@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'user.apps.UserConfig',
     'crispy_forms',
     'todo.apps.TodoConfig',
+    'contact.apps.ContactConfig',
 ]
 
 MIDDLEWARE = [

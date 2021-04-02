@@ -23,7 +23,7 @@ Todo List
             {% for todo in new_todo %}  
               <li>
                
-                 {{ todo }} 
+                 {{ todo|title }} 
                  <a href ="{% url 'deletetodo' todo.id %}">
 
                   <button class='btn btn-danger btn-sm float-right ml-2' type='submit' value="Delete">Delete</button>
