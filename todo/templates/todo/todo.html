@@ -12,7 +12,7 @@ Todo List
         <div class='col-sm' >
       
           <div class='todo_box'>
-            
+              {{ user.username|title }}           
               Enter a new todo item.
               <a href="{% url 'newtodo' %}">
                    <button type='submit' class='btn btn-success btn-sm float-right'>Enter</button>

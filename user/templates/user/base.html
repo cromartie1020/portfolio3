@@ -30,14 +30,26 @@
           <a class="nav-link" href="{% url 'todo' %}">Todo List<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'contact_list' %}">Contact List</a>
+        </li>
+        {% if user.is_authenticated%}
+        
+        </li>
+              <li class="nav-item">
+          <a class="nav-link" href="{% url 'logout' %}">Log Out</a>
+        </li>
+        {% else %}
+        </li>
+              <li class="nav-item">
           <a class="nav-link" href="{% url 'login' %}">Log In</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'logout' %}">Log Out</a>
+          <a class="nav-link" href="{% url 'register' %}">Register</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
+        {% endif %}
+        
       </ul>
     </div>
   </nav>

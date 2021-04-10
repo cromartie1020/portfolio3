@@ -8,7 +8,9 @@ from todo import views as todo_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    
     path('user/',include('user.urls')),
+    path('contact/',include('contact.urls')),
     path('',todo_view.todo,name='todo'),
     path('newtodo/',todo_view.todo_form,name='newtodo'),
     path('deletetodo/<int:pk>/',todo_view.todo_delete,name='deletetodo'),
