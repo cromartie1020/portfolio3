@@ -48,8 +48,11 @@ INSTALLED_APPS = [
     'todo.apps.TodoConfig',
     'contact.apps.ContactConfig',
     'article.apps.ArticleConfig',
-]
-
+    'post.apps.PostConfig',
+    'blog.apps.BlogConfig',
+    'password.apps.PasswordConfig',
+    'listing.apps.ListingConfig',
+]    
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -135,7 +138,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR,'static')
 
-MEDIA_URL = 'media/'
+MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 AUTH_USER_MODEL = 'user.CustomUser'
